@@ -31,8 +31,7 @@
     "test": "vitest",
     "test:type": "vitest typecheck",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "prepare": "husky install"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@mswjs/interceptors": "^0.19.2",
