@@ -1,13 +1,14 @@
 import { Gauge, collectDefaultMetrics, register } from "prom-client";
-const metrics = {
+export const metrics = {
+  /** If `true`, metrics was initialized with `initMetrics` */
+  isInitialized: false,
   renderTime: null,
   requestTime: null,
   totalTime: null
 };
-export const renderTime = metrics.renderTime;
-export const requestTime = metrics.requestTime;
-export const totalTime = metrics.totalTime;
 export const initMetrics = (p) => {
+  if (metrics.isInitialized)
+    return;
   collectDefaultMetrics({
     prefix: p.prefix,
     register
@@ -28,4 +29,5 @@ export const initMetrics = (p) => {
     help: "Total time it took to complete a request",
     labelNames: ["path"]
   });
+  metrics.isInitialized = true;
 };

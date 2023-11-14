@@ -1,5 +1,5 @@
 import { defu } from 'defu';
-import { defineNuxtModule, createResolver, addServerHandler, addServerPlugin, addPlugin } from '@nuxt/kit';
+import { defineNuxtModule, createResolver, addServerHandler, addPlugin } from '@nuxt/kit';
 
 const name = "@artmizu/nuxt-prometheus";
 const version = "2.2.0";
@@ -41,7 +41,6 @@ const module = defineNuxtModule({
         handler: resolve("./runtime/health")
       });
     }
-    addServerPlugin(resolve("./runtime/init-plugin"));
     addPlugin({ src: resolve("./runtime/plugin"), mode: "server" });
   }
 });
