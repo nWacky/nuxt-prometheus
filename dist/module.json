@@ -1,0 +1,9 @@
+{
+  "name": "@artmizu/nuxt-prometheus",
+  "version": "2.2.0",
+  "configKey": "prometheus",
+  "compatibility": {
+    "nuxt": "^3.0.0 || ^2.16.0",
+    "bridge": true
+  }
+}

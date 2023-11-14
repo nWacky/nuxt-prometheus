@@ -1,5 +1,5 @@
 .nuxt
-dist
+# dist
 
 # Dependencies
 node_modules
@@ -17,7 +17,7 @@ node_modules
 **/.yarn/*state*
 
 # Generated dirs
-dist
+# dist
 
 # Nuxt
 .nuxt
