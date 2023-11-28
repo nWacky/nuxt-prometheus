@@ -25,6 +25,7 @@ export default defineNuxtPlugin((ctx) => {
     requests: {},
     interceptor
   };
+  metrics.totalRequests?.labels(state.path).inc();
   ctx.hook("app:rendered", () => {
     state.interceptor?.dispose();
     const time = calculateTime(state);
