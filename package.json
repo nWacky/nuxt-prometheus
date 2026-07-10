@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build build",
+    "prepack1": "nuxt-module-build build",
     "dev": "nuxi dev playground --inspect --host",
     "start": "node ./playground/.output/server/index.mjs",
     "start:debug": "cross-env NODE_OPTIONS='--max-http-header-size=65384' NITRO_PORT=3000 node --inspect ./playground/.output/server/index.mjs",
